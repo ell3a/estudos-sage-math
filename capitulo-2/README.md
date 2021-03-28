@@ -11,6 +11,10 @@
   - [Biblioteca de Funções Sage](#biblioteca-de-funções-sage)
     - [Funções Básicas](#funções-básicas)
     - [Funções Aritméticas](#funções-aritméticas)
+    - [Funções Trigonométricas](#funções-trigonométricas)
+    - [Funções Hiperbólcas](#funções-hiperbólcas)
+    - [Números e Funções Complexas](#números-e-funções-complexas)
+      - [Funções Complexas](#funções-complexas)
 
 <!-- /code_chunk_output -->
 
@@ -52,6 +56,16 @@ __Obs.:__ A execução dos códigos foi feita com sage 8.6, usando o debian 10.
     `forget` | Apaga os valores assumidos em restrições | `forget()`
 
 * `04-funcoes-disponiveis.ipynb`: uso das funções matemáticas disponibilizadas junto com o Sage.
+    
+* `05-Salvando-Objetos.ipynp`: apresenta os métodos para salvar objetos e variáveis e ler objetos e variáveis salvos no disco. Apresenta também o método para salvar um resultado em `Latex`, e como cronometrar o tempo de uma operação de um comando no sage.
+    Método      | Descrição                     | Sintaxe
+    ------------|-------------------------------|-----------------------------
+    `solve`     | Salva objetos no disco        | `solve(objeto, 'nome-do-arquivo')`
+    `load`      | Carrega um arquivo salvo      | `variavel = load('nome-do-arquivo')`
+    `latex`     | Converte uma saída para Latex | `latex(comando)`
+    `%time`     | Cronometra o tempo de um comando | `%time c = 2500^35`
+
+* `matrizA.sobj`: Objeto criado ao salvar uma variável no disco. Operação realizada no arquivo `05-Salvando-Objetos.ipynp`.
 
 ---
 
@@ -92,3 +106,42 @@ Sintaxe            | Descrição
 `gcd(i,j)`         | M.M.C de i e j
 `lcm(i,j)`         | M.D.C de i e j
 `randit(i,j)`      | Número aleatório entre i e j
+
+---
+
+### Funções Trigonométricas
+
+Sintaxe        | Descrição
+---------------|----------------------------
+`sin(x)`       | Seno de `x`
+`cos(x)`       | Cosseno de `x`
+`tan(x)`       | Tangente de `x`
+`sec(x)`       | Secante de `x`
+`csc(x)`       | Cossecante de `x`
+`cot(x)`       | Cotangente de `x`
+`asin(x)`      | Arco seno de `x`
+`acos(x)`      | Arco cosseno de `x`
+`atan(x)`      | Arco tangente de `x`
+`asec(x)`      | Arco secante de `x`
+`acsc(x)`      | Arco cossecante de `x`
+`acot(x)`      | Arco tangente de `x`
+
+---
+### Funções Hiperbólcas
+
+As funções hiperbólicas são acessadas com a seguinte sintaxe: `sinh(x)`, `cosh(x)`, `tanh(x)`, `sech(x)`, `csch(x)` e `coth(x)`.
+
+---
+### Números e Funções Complexas
+
+As letras `i` e `I`estão predefinidas como a constante `sqrt(-1)`.
+
+#### Funções Complexas
+
+Sintaxe        | Descrição
+---------------|----------------------------
+`abs(z)`       | Módulo de `z`
+`arg(z)`       | Argumento de `z`, ângulo positivo formado pelo segmento `Oz` e o eixo real no plano Argand-Gauss.
+`conjugate(z)` | Conjugado de `z`
+`real(z)`      | Parte real de `z`
+`imag(z)`      | Parte imaginária `z`
